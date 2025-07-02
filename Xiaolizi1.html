@@ -1,0 +1,369 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>小李子的剧 - 广播剧合集</title>
+    <style>
+        body {
+            background-color: #fff0f5;
+            font-family: "微软雅黑", sans-serif;
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+            color: #ff69b4;
+            font-size: 32px;
+        }
+        .letter-section {
+            margin-bottom: 15px;
+        }
+        .letter {
+            display: block;
+            font-size: 22px;
+            color: #ff1493;
+            font-weight: bold;
+            cursor: pointer;
+            background: #ffe4e1;
+            border-radius: 10px;
+            padding: 10px;
+            width: fit-content;
+        }
+        .drama-list {
+            display: none;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        ul {
+            list-style-type: "💖 ";
+            padding-left: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: #c71585;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .search-button {
+            margin-top: 30px;
+            display: block;
+            text-align: center;
+        }
+        .search-button button {
+            background-color: #ff69b4;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .search-area {
+            display: none;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .search-area input[type="text"] {
+            width: 60%;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #ffb6c1;
+            border-radius: 10px;
+        }
+        .search-area button {
+            margin-left: 10px;
+            padding: 10px 20px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function toggleList(letter) {
+            var list = document.getElementById("list-" + letter);
+            if (list.style.display === "none") {
+                list.style.display = "block";
+            } else {
+                list.style.display = "none";
+            }
+        }
+
+        function toggleSearch() {
+            var area = document.getElementById("searchArea");
+            area.style.display = (area.style.display === "none") ? "block" : "none";
+        }
+
+        function searchDrama() {
+            const input = document.getElementById("searchInput").value.toLowerCase().trim();
+            const links = {
+                "awm绝地求生": "https://pan.quark.cn/s/6c3d8ffe3e7e",
+                "哎我刀呢": "https://pan.quark.cn/s/aea25c50792a",
+                "安知我意": "https://pan.quark.cn/s/1fe54998dbb5",
+                "不对付": "https://pan.quark.cn/s/327740ef3c85",
+                "百万up学神天天演我": "https://pan.quark.cn/s/7fc82ae2f915"
+            };
+            if (links[input]) {
+                window.open(links[input], "_blank");
+            } else {
+                alert("未找到该广播剧，请检查名称是否正确~");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>🎧 小李子的剧 · 广播剧合集 🎬</h1>
+
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('A')">A</div>
+        <div class="drama-list" id="list-A">
+            <ul>
+    <li><a href="https://pan.quark.cn/s/6c3d8ffe3e7e" target="_blank">《AWM绝地求生》</a></li>
+<li><a href="https://pan.quark.cn/s/aea25c50792a" target="_blank">《哎我刀呢》</a></li>
+<li><a href="https://pan.quark.cn/s/1fe54998dbb5" target="_blank">《安知我意》</a></li>
+
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('B')">B</div>
+        <div class="drama-list" id="list-B">
+            <ul>
+    <li><a href="https://pan.quark.cn/s/327740ef3c85" target="_blank">《不对付》</a></li>
+<li><a href="https://pan.quark.cn/s/7fc82ae2f915" target="_blank">《百万up学神天天演我》</a></li>
+
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('C')">C</div>
+        <div class="drama-list" id="list-C">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('D')">D</div>
+        <div class="drama-list" id="list-D">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('E')">E</div>
+        <div class="drama-list" id="list-E">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('F')">F</div>
+        <div class="drama-list" id="list-F">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('G')">G</div>
+        <div class="drama-list" id="list-G">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('H')">H</div>
+        <div class="drama-list" id="list-H">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('I')">I</div>
+        <div class="drama-list" id="list-I">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('J')">J</div>
+        <div class="drama-list" id="list-J">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('K')">K</div>
+        <div class="drama-list" id="list-K">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('L')">L</div>
+        <div class="drama-list" id="list-L">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('M')">M</div>
+        <div class="drama-list" id="list-M">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('N')">N</div>
+        <div class="drama-list" id="list-N">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('O')">O</div>
+        <div class="drama-list" id="list-O">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('P')">P</div>
+        <div class="drama-list" id="list-P">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('Q')">Q</div>
+        <div class="drama-list" id="list-Q">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('R')">R</div>
+        <div class="drama-list" id="list-R">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('S')">S</div>
+        <div class="drama-list" id="list-S">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('T')">T</div>
+        <div class="drama-list" id="list-T">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('U')">U</div>
+        <div class="drama-list" id="list-U">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('V')">V</div>
+        <div class="drama-list" id="list-V">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('W')">W</div>
+        <div class="drama-list" id="list-W">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('X')">X</div>
+        <div class="drama-list" id="list-X">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('Y')">Y</div>
+        <div class="drama-list" id="list-Y">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="letter-section">
+        <div class="letter" onclick="toggleList('Z')">Z</div>
+        <div class="drama-list" id="list-Z">
+            <ul>
+    <li>暂无剧集</li>
+            </ul>
+        </div>
+    </div>
+    
+<div class="search-button">
+    <button onclick="toggleSearch()">🔍 打开搜索框</button>
+</div>
+
+<div id="searchArea" class="search-area">
+    <input type="text" id="searchInput" placeholder="请输入广播剧名称，如 安知我意">
+    <button onclick="searchDrama()">搜索</button>
+</div>
+</body>
+</html>
